@@ -1,0 +1,12 @@
+#Dev 1 Linear Regression to Predict MPG
+#import libraries
+library(dplyr)
+
+#read cvs file
+MechaCarData <- read.csv(file='MechaCar_mpg.csv',check.names=F,stringsAsFactors=F)
+
+#create linear regression
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCarData)
+
+#create summary
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCarData))
